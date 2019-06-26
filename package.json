@@ -10,5 +10,8 @@
   "dependencies": {
     "pug": "^2.0.4",
     "sass": "^1.22.0"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10"
   }
 }
