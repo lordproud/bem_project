@@ -2,3 +2,31 @@
 @import '_fonts.scss';
 
 @import '../blocks/btn/btn.scss';
+
+
+//Global typography
+body {
+    font-family: $default-font;
+    font-size: 14px;
+}
+
+h1,
+h2 {
+    font-family: 'QuicksandBold', sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 19px;
+}
+
+h3 {
+    font-family: 'MontserratBold', sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+}
