@@ -21,8 +21,13 @@ $border: 2px;
 
   //Modificators
   &--large {
-    display: block;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & i, span {
+      margin-left: auto;
+    }
   }
 
   &--outline {

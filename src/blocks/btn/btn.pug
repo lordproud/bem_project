@@ -1,4 +1,12 @@
 mixin btn(title, mods)
     - if (mods)
-        - var allMods = mods.split(' ').reduce((acc, el) => acc + `btn--${el} `, '')   
-    button.btn(class=allMods)!=title
+        - var modsArr = mods.split(' ')
+        - var allMods = modsArr.reduce((acc, el) => acc + `btn--${el} `, '')   
+        - if (modsArr.filter( el => el == 'large').length === 1)
+            button.btn(class=allMods)
+                span!=title
+                i(class="material-icons") arrow_forward
+        - else
+            button.btn(class=allMods)!=title
+    - else
+        button.btn!=title
