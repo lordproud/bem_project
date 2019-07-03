@@ -3,15 +3,14 @@
     border: 0;
     border-radius: 22px;
     padding: 1rem 0.9rem;
-
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 12px;
     text-align: center;
     text-transform: uppercase;
-
     color: #ffffff;
-    &:hover {
+
+    &:not(.btn--outline):hover {
         opacity: 0.5;
     }
 
@@ -20,4 +19,35 @@
         display: block;
         width: 100%;
     }
+
+    &--outline {
+       
+        position: relative;              
+        $border: 2px;
+        color: $purple;
+        background: #fff;
+        background-clip: padding-box; /* !importanté */
+        border: solid $border transparent; /* !importanté */
+        border-radius: 2em;
+      
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0; right: 0; bottom: 0; left: 0;
+          z-index: -1;
+          margin: -$border; /* !importanté */
+          border-radius: inherit; /* !importanté */
+          background: $primary-color;
+      
+        }
+           &:hover {
+            background-clip: padding-box; /* !importanté */
+            border: solid $border transparent; /* !importanté */
+             &:before {
+               margin: -$border; /* !importanté */
+               border-radius: inherit; /* !importanté */
+               opacity: 0.5;
+             }
+          }
+      }
 }
