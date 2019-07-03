@@ -1,4 +1,4 @@
-mixin btn(title, mod)
-    - if (mod)
-        - var allMods = 'btn--'+mod;   
+mixin btn(title, mods)
+    - if (mods)
+        - var allMods = mods.split(' ').reduce((acc, el) => acc + `btn--${el} `, '')   
     button.btn(class=allMods)!=title
